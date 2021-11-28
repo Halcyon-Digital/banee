@@ -1,0 +1,30 @@
+.nav {
+  /* padding: 5px 240px; */
+  padding: 10px 0px;
+  background-color: #fcf0f7;
+  color: black;
+}
+.nav .nav-bar {
+  width: 83%;
+  margin: auto;
+}
+
+.nav .nav-bar .logo img {
+  width: 180px;
+}
+.academy-nav .nav-bar .logo img {
+  width: 135px;
+}
+.nav-item-group {
+  margin-right: 100px;
+}
+.nav .nav-bar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav .nav-bar ul li {
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}

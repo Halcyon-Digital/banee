@@ -1,0 +1,33 @@
+.footer {
+  width: 80%;
+  margin: 10px auto;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 50px;
+}
+.footer p {
+  line-height: 2;
+}
+.footer p img {
+  width: 20px;
+}
+.footer ul {
+  list-style: none;
+}
+.footer ul .title {
+  font-weight: 700;
+}
+.footer ul .title:not(:first-child) {
+  margin-top: 15px;
+}
+
+.footer-logo-group {
+  margin-top: -50px;
+}
+.footer-logo-group img {
+  width: 75%;
+  max-width: 125px;
+}
+.footer-logo-group img.academy{
+  width: 65%;
+}

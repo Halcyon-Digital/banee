@@ -1,0 +1,333 @@
+@media only screen and (max-width: 768px) {
+  .tab-col-2 {
+    flex-basis: 16%;
+    margin: 0 0.3%;
+  }
+  .tab-col-3 {
+    flex-basis: 24%;
+    margin: 0 0.45%;
+  }
+  .tab-col-4 {
+    flex-basis: 32%;
+    margin: 0 0.6%;
+  }
+  .tab-col-6 {
+    flex-basis: 48%;
+    margin: 0 0.9%;
+  }
+  .tab-col-8 {
+    flex-basis: 64%;
+    margin: 0 1.2%;
+  }
+  .tab-col-9 {
+    flex-basis: 72%;
+    margin: 0 1.3%;
+  }
+  .tab-col-10 {
+    flex-basis: 80%;
+    margin: 0 1.5%;
+  }
+  .nav .nav-bar .logo img {
+    width: 150px;
+  }
+  .nav-item-group {
+    margin-right: 0px;
+  }
+  .nav .nav-bar ul li {
+    font-size: 14px;
+  }
+
+  .invite-area h3 {
+    font-size: 20px;
+  }
+  .invite-area-cake {
+    padding: 30px 0px;
+  }
+  .invite-area .cake-shop .description {
+    margin-left: 0px;
+  }
+  .invite-area .cake-shop .invite-area-cake-logo {
+    width: 100px;
+  }
+  .invite-area .cake-shop .description p {
+    padding: 2px;
+    margin: 5px;
+    font-size: 12px;
+  }
+
+  .invite-area .cake-shop .description .shop-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  .invite-area-creation {
+    padding-bottom: 0px;
+  }
+
+  .invite-area .creation .invite-area-creation-logo {
+    width: 100px;
+  }
+
+  .invite-area .creation .description {
+    margin-right: 0px;
+  }
+  .invite-area .creation .description p {
+    padding: 2px;
+    margin: 5px;
+    font-size: 12px;
+  }
+
+  .invite-area .creation .description .enroll-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  .about-us .about-us-para {
+    width: 80%;
+  }
+  .about-us .title {
+    padding: 30px 0px;
+    font-size: 30px;
+  }
+  .about-us .about-us-para img {
+    width: 111px;
+    margin-left: -20px;
+  }
+
+  /* Creation page */
+  .creation-page {
+    padding: 0;
+    margin: 20px 0px;
+  }
+  .creation-page .title {
+    padding: 5px 0px;
+    font-size: 22px;
+  }
+  .product-show-case {
+    width: 97%;
+  }
+  .product-card {
+    width: 220px;
+    height: 266px;
+  }
+  /* Creation page */
+
+  /* Academy Page */
+  .invite-area-baking {
+    padding: 30px 0px;
+  }
+  .invite-area .baking .description {
+    margin-left: 0px;
+  }
+  .invite-area .baking .invite-area-baking-logo {
+    width: 100px;
+  }
+  .invite-area .baking .description p {
+    padding: 2px;
+    margin: 5px;
+    font-size: 12px;
+  }
+
+  .invite-area .baking .description .baking-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  .invite-area-kids-baking {
+    padding-bottom: 0px;
+  }
+
+  .invite-area .kids-baking .invite-area-kids-baking-logo {
+    width: 100px;
+  }
+
+  .invite-area .kids-baking .description {
+    margin-right: 0px;
+  }
+  .invite-area .kids-baking .description p {
+    padding: 2px;
+    margin: 5px;
+    font-size: 12px;
+  }
+
+  .invite-area .kids-baking .description .kids-baking-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .academy-page .title {
+    padding: 30px 0px;
+    font-size: 37px;
+  }
+  .academy-page .course {
+    max-width: 660px;
+    padding: 0px 20px;
+  }
+  .academy-page .course h3 {
+    font-size: 22px;
+  }
+  .academy-page .course .description {
+    font-size: 12px;
+  }
+  .academy-page .baking-course {
+    padding: 50px 0px;
+  }
+  .academy-page .kids-baking-course .kids-image {
+    margin-top: 115px;
+  }
+  .academy-page .kids-baking-course .kids-baking-course-bdoodle {
+    width: 144%;
+    margin-left: -115px;
+  }
+  .academy-page .kids-baking-course .kids-baking-course-bg {
+    margin-left: -50px;
+  }
+  .academy-page .professional-baking-course-bg {
+    margin-left: -150px;
+  }
+  /* Academy Page */
+
+  /* Course Detals */
+  .course-details .title {
+    padding: 10px 0px;
+    font-size: 22px;
+  }
+  .course-details .container {
+    width: 95%;
+  }
+  .course-details .course-title {
+    font-size: 22px;
+  }
+  .course-details .objective {
+    font-size: 14px;
+  }
+  .course-details .description {
+    font-size: 14px;
+  }
+  .course-details .pricing {
+    font-size: 14px;
+    padding: 30px;
+  }
+  .course-details .related-products {
+    margin-top: -50px;
+  }
+  /* Course Detals */
+
+  .footer {
+    width: 100%;
+  }
+  .footer p {
+    font-size: 9px;
+    line-height: 1;
+  }
+  .footer ul {
+    font-size: 9px;
+  }
+  .footer ul .title:not(:first-child) {
+    margin-top: 5px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .mob-col-2 {
+    flex-basis: 16%;
+    margin: 0 0.3%;
+  }
+  .mob-col-3 {
+    flex-basis: 24%;
+    margin: 0 0.45%;
+  }
+  .mob-col-4 {
+    flex-basis: 32%;
+    margin: 0 0.6%;
+  }
+  .mob-col-6 {
+    flex-basis: 48%;
+    margin: 0 0.9%;
+  }
+  .mob-col-8 {
+    flex-basis: 64%;
+    margin: 0 1.2%;
+  }
+  .mob-col-9 {
+    flex-basis: 72%;
+    margin: 0 1.3%;
+  }
+  .mob-col-10 {
+    flex-basis: 80%;
+    margin: 0 1.5%;
+  }
+  .nav .nav-bar .logo img {
+    width: 120px;
+  }
+  .about-us .about-us-para {
+    width: 90%;
+  }
+  .about-us .title {
+    padding: 33px 0px;
+    font-size: 20px;
+  }
+  .product-card {
+    width: 160px;
+    height: 190px;
+  }
+  .academy-page .title {
+    padding: 13px 0px;
+    font-size: 24px;
+  }
+
+  .academy-page .professional-baking-course {
+    padding: 0px 5px;
+  }
+  .academy-page .course h3 {
+    font-size: 12px;
+  }
+  .academy-page .course .description {
+    font-size: 10px;
+  }
+  .academy-page .professional-baking-course-bg {
+    margin-left: -110px;
+  }
+  .academy-page .baking-course {
+    padding: 50px 0px;
+  }
+  .academy-page .kids-baking-course .kids-image {
+    margin-top: 85px;
+  }
+  .academy-page .kids-baking-course .kids-baking-course-bg {
+    margin-left: -45px;
+  }
+  .academy-page .kids-baking-course .kids-baking-course-bdoodle {
+    margin-left: -50px;
+  }
+  .more-section {
+    padding-top: 0px;
+  }
+  .product-details .description {
+    width: 100%;
+    margin: 3px 0px;
+  }
+  .details .title {
+    margin: 5px;
+  }
+  .related-products {
+    width: 98%;
+  }
+  .course-details img.bg {
+    position: absolute;
+    margin-top: -410px;
+  }
+  .course-details .related-products {
+    margin-top: 0px;
+  }
+  .related-products .title {
+    margin: 5px 0px;
+  }
+  .btn {
+    background-color: #511c3a;
+    padding: 7px 12px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 25px;
+  }
+  .copyright-section {
+    font-size: 10px;
+  }
+}

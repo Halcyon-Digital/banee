@@ -39,11 +39,13 @@ export default function Product_details() {
                 <div className="row branch">
                   <div className="col-8">
                     <p className="branch-name">Branch-01</p>
-                    <p>Address: </p>
-                    <p>Contact No: </p>
+                    <p>Address: H-0, R-0, Mirpur, Dhaka-1216</p>
+                    <p>Contact No: +8801718664707</p>
                   </div>
                   <div className="col-2">
-                    <img src={call_icon} alt="" srcset="" />
+                    <a href="tel:+8801718664707">
+                      <img src={call_icon} alt="" srcset="" />
+                    </a>
                   </div>
                 </div>
                 <div className="row branch">

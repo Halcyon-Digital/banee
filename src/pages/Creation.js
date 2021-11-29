@@ -32,48 +32,97 @@ export default function Creation() {
                   </div>
                 </div>
               </HashLink>
-              <div className="product-card">
-                <img src={product_1} alt="" />
-                <div className="desc">
-                  <p className="name">Product name 1</p>
-                  <p className="price">BDT. 1500</p>
+              <HashLink to="/creation/products/1# ">
+                <div className="product-card">
+                  <img src={product_1} alt="" />
+                  <div className="desc">
+                    <p className="name">Product name 1</p>
+                    <p className="price">BDT. 1500</p>
+                  </div>
                 </div>
-              </div>
-              <div className="product-card">
-                <img src={product_1} alt="" />
-                <div className="desc">
-                  <p className="name">Product name 1</p>
-                  <p className="price">BDT. 1500</p>
+              </HashLink>
+              <HashLink to="/creation/products/1# ">
+                <div className="product-card">
+                  <img src={product_1} alt="" />
+                  <div className="desc">
+                    <p className="name">Product name 1</p>
+                    <p className="price">BDT. 1500</p>
+                  </div>
                 </div>
-              </div>
-              <div className="product-card">
-                <img src={product_1} alt="" />
-                <div className="desc">
-                  <p className="name">Product name 1</p>
-                  <p className="price">BDT. 1500</p>
+              </HashLink>
+              <HashLink to="/creation/products/1# ">
+                <div className="product-card">
+                  <img src={product_1} alt="" />
+                  <div className="desc">
+                    <p className="name">Product name 1</p>
+                    <p className="price">BDT. 1500</p>
+                  </div>
                 </div>
-              </div>
-              <div className="product-card">
-                <img src={product_1} alt="" />
-                <div className="desc">
-                  <p className="name">Product name 1</p>
-                  <p className="price">BDT. 1500</p>
+              </HashLink>
+              <HashLink to="/creation/products/1# ">
+                <div className="product-card">
+                  <img src={product_1} alt="" />
+                  <div className="desc">
+                    <p className="name">Product name 1</p>
+                    <p className="price">BDT. 1500</p>
+                  </div>
                 </div>
-              </div>
-              <div className="product-card">
-                <img src={product_1} alt="" />
-                <div className="desc">
-                  <p className="name">Product name 1</p>
-                  <p className="price">BDT. 1500</p>
+              </HashLink>
+              <HashLink to="/creation/products/1# ">
+                <div className="product-card">
+                  <img src={product_1} alt="" />
+                  <div className="desc">
+                    <p className="name">Product name 1</p>
+                    <p className="price">BDT. 1500</p>
+                  </div>
                 </div>
-              </div>
-              <div className="product-card">
-                <img src={product_1} alt="" />
-                <div className="desc">
-                  <p className="name">Product name 1</p>
-                  <p className="price">BDT. 1500</p>
+              </HashLink>
+              <HashLink to="/creation/products/1# ">
+                <div className="product-card">
+                  <img src={product_1} alt="" />
+                  <div className="desc">
+                    <p className="name">Product name 1</p>
+                    <p className="price">BDT. 1500</p>
+                  </div>
                 </div>
-              </div>
+              </HashLink>
+              <HashLink to="/creation/products/1# ">
+                <div className="product-card">
+                  <img src={product_1} alt="" />
+                  <div className="desc">
+                    <p className="name">Product name 1</p>
+                    <p className="price">BDT. 1500</p>
+                  </div>
+                </div>
+              </HashLink>
+              <HashLink to="/creation/products/1# ">
+                <div className="product-card">
+                  <img src={product_1} alt="" />
+                  <div className="desc">
+                    <p className="name">Product name 1</p>
+                    <p className="price">BDT. 1500</p>
+                  </div>
+                </div>
+              </HashLink>
+              <HashLink to="/creation/products/1# ">
+                <div className="product-card">
+                  <img src={product_1} alt="" />
+                  <div className="desc">
+                    <p className="name">Product name 1</p>
+                    <p className="price">BDT. 1500</p>
+                  </div>
+                </div>
+              </HashLink>
+              <HashLink to="/creation/products/1# ">
+                <div className="product-card">
+                  <img src={product_1} alt="" />
+                  <div className="desc">
+                    <p className="name">Product name 1</p>
+                    <p className="price">BDT. 1500</p>
+                  </div>
+                </div>
+              </HashLink>
+              
             </div>
           </div>
         </div>

@@ -75,7 +75,7 @@ export default function Course_details() {
             <span className="sec-1">Related</span> &nbsp;
             <span className="sec-2">Courses</span>
           </h3>
-          <div className="row">
+          {/* <div className="row">
             <HashLink to="/creation/product_details/1#Product name 1">
               <div className="product-card">
                 <img src={product_1} alt="" />
@@ -157,7 +157,7 @@ export default function Course_details() {
                 </div>
               </div>
             </HashLink>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

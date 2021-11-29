@@ -298,16 +298,27 @@
   }
   .more-section {
     padding-top: 0px;
+    margin-top: 30px;
   }
   .product-details .description {
     width: 100%;
     margin: 3px 0px;
+    padding-left: 0px;
+    margin-top: 30px;
+  }
+  .product-details .description .location {
+    margin-top: 30px;
   }
   .details .title {
     margin: 5px;
   }
+  .details p {
+    margin: 5px;
+    text-align: justify;
+  }
   .related-products {
     width: 98%;
+    margin-top: 30px;
   }
   .course-details img.bg {
     position: absolute;

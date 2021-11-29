@@ -7,6 +7,7 @@ import kids_baking_course from "../assets/images/kids-baking-course.png";
 import kids_baking_course_doodle from "../assets/images/kids-baking-course-doodle.png";
 import kids_baking_course_bg from "../assets/images/kids-baking-course-bg.png";
 import video from "../assets/video.mp4";
+import { HashLink } from "react-router-hash-link";
 
 export default function Academy() {
   return (
@@ -27,7 +28,12 @@ export default function Academy() {
                 alt=""
                 srcset=""
               /> */}
-              <video className="w-full professional-baking-course-image" autoPlay muted loop>
+              <video
+                className="w-full professional-baking-course-image"
+                autoPlay
+                muted
+                loop
+              >
                 <source src={video} type="video/mp4"></source>
                 Your browser does not support HTML5 video.
               </video>
@@ -47,7 +53,9 @@ export default function Academy() {
                 fuga cumque.
               </p>
               <p>
-                <span className="btn">Learn More</span>
+                <HashLink to="/academy/courses/:id">
+                  <span className="btn">Learn More</span>
+                </HashLink>
               </p>
             </div>
           </div>
@@ -63,7 +71,9 @@ export default function Academy() {
                 fuga cumque.
               </p>
               <p>
-                <span className="btn">Learn More</span>
+                <HashLink to="/academy/courses/:id">
+                  <span className="btn">Learn More</span>
+                </HashLink>
               </p>
             </div>
             <div className="col-6">
@@ -94,7 +104,9 @@ export default function Academy() {
               cumque.
             </p>
             <p>
-              <span className="btn">Learn More</span>
+              <HashLink to="/academy/courses/:id">
+                <span className="btn">Learn More</span>
+              </HashLink>
             </p>
             <img
               className="kids-baking-course-bdoodle"

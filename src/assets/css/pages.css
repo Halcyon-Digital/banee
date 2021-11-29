@@ -63,13 +63,13 @@ a {
 }
 .invite-area-cake {
   padding: 100px 0px;
-  background-image: url("../images//landing-page/invite-are-cake-shop-background.png");
+  background-image: url("../images//landing-page/invite-are-cake-shop-background.webp");
   background-size: 100% 100%;
 }
 .invite-area-creation {
   padding: 0px 0px;
   padding-bottom: 115px;
-  background-image: url("../images//landing-page/invite-area-creation-background.png");
+  background-image: url("../images//landing-page/invite-area-creation-background.webp");
   background-size: 100% 100%;
 }
 .invite-area .cake-shop {
@@ -172,7 +172,7 @@ a {
 .creation-page {
   margin: 100px 0px;
   padding: 20px;
-  background-image: url("../images/creation-background.png");
+  background-image: url("../images/creation-background.webp");
   background-size: 100% 100%;
 }
 .creation-page .title {
@@ -279,7 +279,7 @@ a {
   font-size: 16px;
 }
 .more-section {
-  background-image: url("../images/product-details-background.png");
+  background-image: url("../images/product-details-background.webp");
   background-size: 100% 100%;
   /* padding:100px 0px */
   padding-top: 50px;
@@ -359,7 +359,7 @@ a {
 .academy-page .baking-course {
   padding: 110px 0px;
   /* padding: 125px 10% 125px 20%; */
-  background-image: url("../images/invite-are-baking-background.png");
+  background-image: url("../images/invite-are-baking-background.webp");
   background-size: 100% 100%;
 }
 .academy-page .course h3 {

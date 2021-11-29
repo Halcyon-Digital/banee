@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import logo from "../assets/images/header-logo-academy.png";
+import logo from "../assets/images/header-logo-academy.webp";
 
 export default function Academy_Navbar() {
   return (

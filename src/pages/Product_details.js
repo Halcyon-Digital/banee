@@ -1,8 +1,8 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
-import product_1 from "../assets/images/cake-1.png";
-import call_icon from "../assets/images/call-icon.png";
-import background from "../assets/images/product-details-background.png";
+import product_1 from "../assets/images/cake-1.webp";
+import call_icon from "../assets/images/call-icon.webp";
+import background from "../assets/images/product-details-background.webp";
 import Navbar from "../Components/Navbar";
 export default function Product_details() {
   return (

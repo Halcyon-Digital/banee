@@ -1,8 +1,8 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
-import product_1 from "../assets/images/cake-1.png";
-import header from "../assets/images/course-header.png";
-import course_details_bg from "../assets/images/course-details-bg.png";
+import product_1 from "../assets/images/cake-1.webp";
+import header from "../assets/images/course-header.webp";
+import course_details_bg from "../assets/images/course-details-bg.webp";
 import Navbar from "../Components/Academy_Navbar";
 export default function Course_details() {
   return (

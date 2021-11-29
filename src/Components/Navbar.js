@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import logo from "../assets/images/landing-page/header-logo-creation.png";
+import logo from "../assets/images/landing-page/header-logo-creation.webp";
 
 export default function Navbar() {
   return (

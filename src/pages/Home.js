@@ -1,14 +1,14 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
-import hero_cake from "../assets/images/landing-page/hero-cake.png";
-import header_image from "../assets/images/landing-page/Header-Image.jpg";
-import cakeshop_image from "../assets/images/landing-page/landing-page-cake-shop-image.png";
-import invite_area_cake from "../assets/images/landing-page/invite-area-cake.png";
-import invite_area_creation from "../assets/images/landing-page/invite-area-creation.png";
-import invite_area_creation_logo from "../assets/images/landing-page/invite-area-creation-logo.png";
-import about_us_header from "../assets/images/landing-page/about-us-header.png";
-import about_us_lolipop from "../assets/images/landing-page/about-us-lolipop.png";
-import gallary from "../assets/images/landing-page/landin-page-galary.png";
+import hero_cake from "../assets/images/landing-page/hero-cake.webp";
+import header_image from "../assets/images/landing-page/Header-Image.webp";
+import cakeshop_image from "../assets/images/landing-page/landing-page-cake-shop-image.webp";
+import invite_area_cake from "../assets/images/landing-page/invite-area-cake.webp";
+import invite_area_creation from "../assets/images/landing-page/invite-area-creation.webp";
+import invite_area_creation_logo from "../assets/images/landing-page/invite-area-creation-logo.webp";
+import about_us_header from "../assets/images/landing-page/about-us-header.webp";
+import about_us_lolipop from "../assets/images/landing-page/about-us-lolipop.webp";
+import gallary from "../assets/images/landing-page/landin-page-galary.webp";
 import Navbar from "../Components/Navbar";
 export default function Home() {
   return (

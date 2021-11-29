@@ -1,11 +1,11 @@
 import React from "react";
 import Academy_Navbar from "../Components/Academy_Navbar";
-import baking_course from "../assets/images/baking-course.png";
-import professional_baking_course from "../assets/images/professional-baking-course.png";
-import professional_baking_course_bg from "../assets/images/professional-baking-course-bg.png";
-import kids_baking_course from "../assets/images/kids-baking-course.png";
-import kids_baking_course_doodle from "../assets/images/kids-baking-course-doodle.png";
-import kids_baking_course_bg from "../assets/images/kids-baking-course-bg.png";
+import baking_course from "../assets/images/baking-course.webp";
+import professional_baking_course from "../assets/images/professional-baking-course.webp";
+import professional_baking_course_bg from "../assets/images/professional-baking-course-bg.webp";
+import kids_baking_course from "../assets/images/kids-baking-course.webp";
+import kids_baking_course_doodle from "../assets/images/kids-baking-course-doodle.webp";
+import kids_baking_course_bg from "../assets/images/kids-baking-course-bg.webp";
 import video from "../assets/video.mp4";
 import { HashLink } from "react-router-hash-link";
 

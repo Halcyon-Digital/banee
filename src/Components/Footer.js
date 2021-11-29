@@ -1,10 +1,10 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
-import footer_logo_creation from "../assets/images/landing-page/footer-logo-creation.png";
-import footer_logo_academy from "../assets/images/landing-page/footer-logo-academy.png";
-import location_icon from "../assets/images/landing-page/location-icon.png";
-import headphone_icon from "../assets/images/landing-page/headphone-icon.png";
-import email_icon from "../assets/images/landing-page/email-icon.png";
+import footer_logo_creation from "../assets/images/landing-page/footer-logo-creation.webp";
+import footer_logo_academy from "../assets/images/landing-page/footer-logo-academy.webp";
+import location_icon from "../assets/images/landing-page/location-icon.webp";
+import headphone_icon from "../assets/images/landing-page/headphone-icon.webp";
+import email_icon from "../assets/images/landing-page/email-icon.webp";
 export default function Footer() {
   return (
     <div>

@@ -1,7 +1,7 @@
 import React from "react";
-import hero_image from "../assets/images/creation-hero-image.png";
-import product_1 from "../assets/images/cake-1.png";
-import background from "../assets/images/creation-background.png";
+import hero_image from "../assets/images/creation-hero-image.webp";
+import product_1 from "../assets/images/cake-1.webp";
+import background from "../assets/images/creation-background.webp";
 import { HashLink } from "react-router-hash-link";
 import Navbar from "../Components/Navbar";
 

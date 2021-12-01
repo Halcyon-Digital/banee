@@ -22,12 +22,6 @@ export default function Academy() {
           </h3>
           <div className="course professional-baking-course row">
             <div className="col-6 ">
-              {/* <img
-                className="professional-baking-course-image"
-                src={professional_baking_course}
-                alt=""
-                srcset=""
-              /> */}
               <video
                 className="w-full professional-baking-course-image"
                 autoPlay

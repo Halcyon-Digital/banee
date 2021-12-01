@@ -263,9 +263,20 @@
     padding: 33px 0px;
     font-size: 20px;
   }
+  .product-show-case .row {
+    justify-content: center;
+  }
+  .creation-page .category-list-item {
+    margin: 0px;
+    padding: 5px;
+    font-size: 12px;
+  }
   .product-card {
     width: 160px;
     height: 190px;
+  }
+  .product-card .desc .name {
+    font-size: 12px;
   }
   .academy-page .title {
     padding: 13px 0px;

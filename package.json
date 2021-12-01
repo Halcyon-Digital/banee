@@ -15,7 +15,7 @@
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "^3.4.4",
     "scss": "^0.2.4"
-  },
+  }, 
   "scripts": {
     "start": "react-scripts start",
     "build": "CI=false && react-scripts build",

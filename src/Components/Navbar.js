@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import logo from "../assets/images/landing-page/header-logo-creation.webp";
@@ -18,7 +18,7 @@ export default function Navbar() {
             <HashLink to="/gallary#">
               <li className="nav-item">Gallary</li>
             </HashLink>
-            <HashLink to="/contact_us#">
+            <HashLink to="/contact#">
               <li className="nav-item">Contact Us</li>
             </HashLink>
           </ul>

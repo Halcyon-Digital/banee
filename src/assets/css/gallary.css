@@ -1,0 +1,48 @@
+.gallery {
+  width: 80%;
+  margin: 20px auto;
+  padding: 5px;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.gallery > div {
+  position: relative;
+  float: left;
+  padding: 5px;
+}
+
+.gallery > div > img {
+  width: 263px;
+  /* height: 263px; */
+  transition: 0.1s transform;
+  transform: translateZ(0);
+  box-shadow: 0px 0px 6px 0px #a5939d;
+  background-color: white;
+}
+
+.gallery > div:hover {
+  z-index: 1;
+}
+
+.gallery > div:hover > img {
+  transform: scale(1.8, 1.8);
+  transition: 0.3s transform;
+}
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.cf:after {
+  clear: both;
+}
+@media only screen and (max-width: 480px) {
+  .gallery > div > img {
+    width: 133px;
+    /* height: 133px; */
+  }
+}

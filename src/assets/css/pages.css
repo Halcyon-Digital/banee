@@ -1,4 +1,4 @@
-@import url("http://fonts.cdnfonts.com/css/acratica");
+@import url("https://fonts.cdnfonts.com/css/acratica");
 * {
   padding: 0;
   margin: 0;
@@ -8,6 +8,10 @@ html {
 }
 a {
   text-decoration: none;
+  color: black;
+}
+li {
+  list-style: none;
 }
 .btn {
   background-color: #511c3a;
@@ -53,6 +57,27 @@ a {
 .col-10 {
   flex-basis: 80%;
   margin: 0 1.5%;
+}
+/* Image magnifier */
+
+.img-magnifier-container {
+  
+  /* width: 585px;
+  height: 650px; */
+  /* width: 75%;
+  height: 75%; */
+ margin-bottom: 15px;
+  position: relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 1px solid #000;
+  /* border-radius: 50%; */
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 30%;
+  height: 25%;
 }
 .hero-content img {
   width: 100%;
@@ -182,10 +207,16 @@ a {
 }
 .creation-page .category-list-item {
   background-color: #d8adc8;
+  margin: 0px 3px;
   padding: 5px 20px;
   display: inline-block;
   text-transform: uppercase;
   /* margin: 0px 5px; */
+  cursor: pointer;
+}
+.creation-page .category-list-item:hover {
+  color: black;
+  background-color: white;
 }
 .creation-page .title {
   text-align: center;
@@ -200,10 +231,10 @@ a {
 .creation-page .title .sec-2 {
   color: #ad4381;
 }
-.pagination{
+.pagination {
   margin: auto;
 }
-.pagination button{
+.pagination button {
   margin: 20px 20px;
 }
 .product-show-case {
@@ -211,7 +242,7 @@ a {
   margin: auto;
 }
 .product-show-case .row {
-  justify-content: start;
+  justify-content: center;
 }
 .product-card {
   width: 240px;
@@ -287,6 +318,9 @@ a {
 .product-details .description .location img {
   width: 35px;
 }
+.product-details .description .regular{
+  padding: 0 5px;
+}
 .location .branch {
   align-items: center;
   margin: 10px 0px;
@@ -320,7 +354,7 @@ a {
   width: 80%;
   margin: auto;
 }
-.related-products .row{
+.related-products .row {
   justify-content: start;
 }
 .related-products .title {
@@ -340,6 +374,30 @@ a {
   height: 200px;
 }
 /* Product Details Page */
+/* Custom Order Page */
+.custom-order .registration-form {
+  display: block;
+  position: inherit;
+  padding: 0px 10%;
+}
+.custom-order .registration-form form {
+  border: none;
+}
+.custom-order .registration-form form .title {
+  text-align: center;
+  font-size: 42px;
+  padding: 21px 0px;
+}
+.custom-order .registration-form .btn {
+  margin: auto;
+  width: 250px;
+  padding: 20px;
+}
+.custom-order .registration-form img {
+  width: 100px;
+  display: block;
+}
+/* Custom Order Page */
 
 /* Academy Page */
 .academy-page .title {
@@ -378,12 +436,17 @@ a {
   z-index: -1;
 }
 .academy-page .professional-baking-course {
-  padding: 50px 10% 50px 20%;
+  /* padding: 50px 10% 50px 20%; */
 }
 .academy-page .baking-course {
   padding: 110px 0px;
   /* padding: 125px 10% 125px 20%; */
   background-image: url("../images/invite-are-baking-background.webp");
+  background-size: 100% 100%;
+}
+.academy-page .cookery-crackary-course {
+  padding: 75px 0px;
+  background-image: url("../images/cookery-crackery-course-bg.webp");
   background-size: 100% 100%;
 }
 .academy-page .course h3 {
@@ -398,11 +461,14 @@ a {
 .academy-page .kids-baking-course .kids-image {
   margin-top: 210px;
 }
+.academy-page .govt-baking-course .kids-image {
+  margin-top: 100px;
+}
 .academy-page .kids-baking-course .kids-baking-course-bdoodle {
-  position: relative;
-  margin-top: -428px;
+  position: absolute;
+  margin-top: -610px;
   margin-left: -81px;
-  width: 154%;
+  width: 55%;
   /* height: 77%; */
   z-index: -1;
 }
@@ -412,6 +478,11 @@ a {
   margin-left: -117px;
   width: 135%;
   z-index: -1;
+}
+.academy-page .govt-baking-course .kids-baking-course-bg {
+  margin-top: -430px;
+  margin-left: -117px;
+  width: 156%;
 }
 /* Academy Page */
 
@@ -457,18 +528,114 @@ a {
   font-size: 22px;
   padding: 50px;
 }
+
+.course-details .pricing .py-2{
+  padding: 7px 0;
+}
 .course-details .btn {
   margin-top: 50px;
+  width: 100%;
 }
 .course-details .related-products {
   margin-top: -300px;
 }
 .course-details .pricing {
   margin-top: 30px;
-  width: 100%;
+  width: 90%;
   text-align: center;
 }
+.course-card {
+  position: relative;
+  color: black;
+  padding: 15px 0px;
+  background-color: white;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 15px;
+  box-shadow: 0px 0px 6px 3px #e1e1e1;
+}
+.course-card img {
+}
+
+.course-card .name {
+  height: 100px;
+}
+.course-card .price {
+  padding: 10px 0px;
+}
+.course-card .btn {
+  width: -webkit-fill-available;
+  position: absolute;
+  bottom: 10px;
+}
 /* Course details Page */
+
+/* Form */
+.cross-btn {
+  font-weight: 900;
+  float: right;
+  position: relative;
+  margin-top: -10px;
+}
+.registration-form {
+  display: none;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  /* width: 90%; */
+  padding: 10%;
+  /* border: 1px solid black; */
+}
+.registration-form .success-messages {
+  text-align: center;
+  font-size: 22px;
+  color: #83044f;
+  margin-bottom: 50px;
+}
+.registration-form form {
+  border: 1px solid black;
+  padding: 20px;
+  background-color: white;
+  opacity: 0.96;
+}
+.registration-form input {
+  width: 97%;
+  border: 1px solid black;
+  margin: 10px 0px;
+  font-size: 20px;
+  padding: 5px 5px;
+}
+.registration-form input[type="radio"] {
+  width: auto;
+  margin: 10px 20px;
+}
+.registration-form select {
+  width: 100%;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+.registration-form textarea {
+  width: 97%;
+  border: 1px solid black;
+  margin: 10px 0px;
+  font-size: 20px;
+  padding: 5px 5px;
+}
+/* Form */
+
+/* Contact Page */
+.contact-page {
+  width: 80%;
+  margin: auto;
+  /* margin-top: 40px; */
+}
+.contact-page .registration-form form .title {
+  font-size: 32px;
+}
+.contact-page .registration-form form .btn {
+  width: -webkit-fill-available;
+}
+/* Contact Page */
 
 .copyright-section {
   justify-content: space-between;

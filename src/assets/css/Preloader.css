@@ -1,0 +1,57 @@
+.wrapper {
+  /* position: relative;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  width: 100%;
+  text-align: center;
+}
+.square {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #d71920;
+  animation: loading 1.5s cubic-bezier(0.8, 0.5, 0.2, 1.4) infinite;
+  transform-origin: bottom top;
+  position: relative;
+}
+
+.square:not(:last-child) {
+  margin-right: 2px;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateY(0px) scale(0.34);
+    background-color: #f7d1d2;
+  }
+  50% {
+    transform: translateY(22px) scale(1);
+    background-color: #d71920;
+  }
+  100% {
+    transform: translateY(0px) scale(0.34);
+    background-color: #f7d1d2;
+  }
+}
+.square-1 {
+  animation-delay: 0.8s;
+}
+.square-2 {
+  animation-delay: 0.7s;
+}
+.square-3 {
+  animation-delay: 0.6s;
+}
+.square-4 {
+  animation-delay: 0.5s;
+}
+.square-5 {
+  animation-delay: 0.4s;
+}
+.square-6 {
+  animation-delay: 0.3s;
+}
+.square-7 {
+  animation-delay: 0.2s;
+}

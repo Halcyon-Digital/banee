@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import { HashLink } from "react-router-hash-link";
 import logo from "../assets/images/header-logo-academy.webp";
 
@@ -17,7 +16,7 @@ export default function Academy_Navbar() {
             <HashLink to="/gallary#">
               <li className="nav-item">Gallary</li>
             </HashLink>
-            <HashLink to="/contact_us#">
+            <HashLink to="/contact#">
               <li className="nav-item">Contact Us</li>
             </HashLink>
           </ul>

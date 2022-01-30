@@ -34,6 +34,7 @@
     margin-right: 0px;
   }
   .nav .nav-bar ul li {
+    margin-left: 5px;
     font-size: 14px;
   }
 
@@ -173,8 +174,9 @@
     margin-top: 115px;
   }
   .academy-page .kids-baking-course .kids-baking-course-bdoodle {
-    width: 144%;
+    width: 62%;
     margin-left: -115px;
+    margin-top: -395px;
   }
   .academy-page .kids-baking-course .kids-baking-course-bg {
     margin-left: -50px;
@@ -253,6 +255,9 @@
     flex-basis: 80%;
     margin: 0 1.5%;
   }
+  .mob-col-12 {
+    flex-basis: 100%;
+  }
   .nav .nav-bar .logo img {
     width: 120px;
   }
@@ -267,9 +272,9 @@
     justify-content: center;
   }
   .creation-page .category-list-item {
-    margin: 0px;
-    padding: 5px;
-    font-size: 12px;
+    margin: 2px;
+    padding: 4px;
+    font-size: 10px;
   }
   .product-card {
     width: 160px;
@@ -299,12 +304,14 @@
     padding: 50px 0px;
   }
   .academy-page .kids-baking-course .kids-image {
-    margin-top: 85px;
+    margin-top: 25px;
   }
   .academy-page .kids-baking-course .kids-baking-course-bg {
     margin-left: -45px;
   }
   .academy-page .kids-baking-course .kids-baking-course-bdoodle {
+    width: 98%;
+    margin-top: -350px;
     margin-left: -50px;
   }
   .more-section {
@@ -351,5 +358,18 @@
   }
   .copyright-section {
     font-size: 10px;
+  }
+  .contact-page {
+    width: 100%;
+  }
+  .contact-page .title {
+    width: 100%;
+    text-align: center;
+  }
+  .contact-page .company-details {
+    text-align: center;
+  }
+  .contact-page .registration-form form .title {
+    font-size: 28px;
   }
 }

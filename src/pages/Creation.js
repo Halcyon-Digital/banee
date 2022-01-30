@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import hero_image from "../assets/images/creation-hero-image.webp";
-import product_1 from "../assets/images/cake-1.webp";
-import background from "../assets/images/creation-background.webp";
-import { HashLink } from "react-router-hash-link";
-import Navbar from "../Components/Navbar";
 import axios from "axios";
 import { useQuery } from "react-query";
-import ProductCard from "../Components/ProductCard";
+import ProductCard from "../Components/Related_ProductCard";
+import Creative_Navbar from "../Components/Creative_Navbar";
+import Product_card from "../Components/Product_card";
+import PreLoader from "../Components/PreLoader";
 const proxy = process.env.REACT_APP_PROXY;
 const ck = process.env.REACT_APP_CK;
 const cs = process.env.REACT_APP_CS;
@@ -38,26 +37,41 @@ const getAllProducts = async (x) => {
     });
   return data;
 };
+const getProductPageBanner = async (x) => {
+  const data = await axios
+    .get(`${proxy}/wp/v2/product_page_banner`)
+    .then((res) => {
+      return res.data;
+    });
+  return data;
+};
 export default function Creation() {
   const [pagenumber, setpagenumber] = useState(1);
   const [totalpages, settotalpages] = useState("");
-  const [category, setcategory] = useState("")
-  
+  const [category, setcategory] = useState("");
+
   const { data: AllCategories, status: categoryStatus } = useQuery(
     ["AllCategoriesData"],
     getAllCategories
   );
   const { data: AllProducts, status: productStatus } = useQuery(
-    ["AllProductsData",category, pagenumber],
+    ["AllProductsData", category, pagenumber],
     getAllProducts
   );
+  const { data: banner, status: bannerStatus } = useQuery(
+    ["ProductPageBanner"],
+    getProductPageBanner
+  );
+ 
   return (
     <div>
-      <Navbar></Navbar>
+      <Creative_Navbar></Creative_Navbar>
       <section id=""></section>
       <div className="hero-area">
         <div className="hero-content">
-          <img src={hero_image} alt="" srcset="" />
+          {banner && banner.length ? (
+            <img src={banner[0].acf.banner_image.url} alt="" srcset="" />
+          ) : null}
         </div>
 
         <div className="creation-page">
@@ -66,11 +80,11 @@ export default function Creation() {
               <ul className="category-list">
                 {AllCategories && AllCategories.length
                   ? AllCategories.map((category, key) => (
-                      <li
+                      <li key={key}
                         className="category-list-item"
                         onClick={() => {
                           // sortProduct(category.id);
-                          setcategory(category.id)
+                          setcategory(category.id);
                         }}
                       >
                         {category.name}
@@ -83,41 +97,44 @@ export default function Creation() {
           <div className="product-show-case">
             <div className="title"></div>
             <div className="row">
-              {AllProducts && AllProducts.length
-                ? AllProducts.map((product, key) => (
-                    <ProductCard id={product.id}></ProductCard>
-                  ))
-                : null}
+              {productStatus !== "success" ? (
+                <PreLoader></PreLoader>
+              ) : (
+                <>
+                  {AllProducts && AllProducts.length ? (
+                    AllProducts.map((product, key) => (
+                      <Product_card ProductDetails={product}></Product_card>
+                    ))
+                  ) : (
+                    <h3 className="title">No Product Available</h3>
+                  )}
+                </>
+              )}
             </div>
             {/* Pagination Section */}
           </div>
-          {totalpages.length === 1 ? null : (
-            <div className="row">
-              <div className="pagination">
-                <button
-                  className="btn"
-                  // onClick={() =>
-                  //   setpagenumber(pagenumber !== 1 ? pagenumber - 1 : pagenumber)
-                  // }
-                  onClick={() => setpagenumber((old) => Math.max(old - 1, 1))}
-                  disabled={pagenumber === 1}
-                >
-                  &#8592;
-                </button>
+          <div className="row">
+            <div className="pagination">
+              <button
+                className="btn"
+                onClick={() => setpagenumber((old) => Math.max(old - 1, 1))}
+                disabled={pagenumber === 1}
+              >
+                &#8592;
+              </button>
 
-                {pagenumber}
-                <button
-                  className="btn"
-                  onClick={() => {
-                    setpagenumber((old) => old + 1);
-                  }}
-                  disabled={AllProducts && AllProducts.length === 0}
-                >
-                  &#8594;
-                </button>
-              </div>
+              {pagenumber}
+              <button
+                className="btn"
+                onClick={() => {
+                  setpagenumber((old) => old + 1);
+                }}
+                disabled={AllProducts && AllProducts.length === 0}
+              >
+                &#8594;
+              </button>
             </div>
-          )}
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
-import hero_cake from "../assets/images/landing-page/hero-cake.webp";
 import header_image from "../assets/images/landing-page/Header-Image.webp";
 import cakeshop_image from "../assets/images/landing-page/landing-page-cake-shop-image.webp";
 import invite_area_cake from "../assets/images/landing-page/invite-area-cake.webp";
@@ -64,7 +63,7 @@ export default function Home() {
                   facere possimus beatae repellat amet. Amet!
                 </p>
                 <p>
-                  <HashLink to="/academy#">
+                  <HashLink to="/courses#">
                     <span className="enroll-btn">Enroll Now</span>
                   </HashLink>
                 </p>
@@ -84,37 +83,46 @@ export default function Home() {
               <span className="sec-2">us</span>
             </h3>
             <p className="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
-              veniam iste blanditiis, minima atque vitae consectetur amet,
-              aliquid voluptate cum libero? Et saepe fugiat officia, aliquam
-              blanditiis vitae delectus accusantium necessitatibus maiores
-              consequuntur dolor fugit dignissimos. Aperiam rerum, repellat quia
-              neque dolores velit magnam, quaerat et earum rem tempore nulla qui
-              harum officiis voluptatibus laborum soluta hic tempora ab.
-              Quisquam quasi animi unde sint facilis sequi doloribus ducimus
-              delectus laudantium? Eos doloremque ut nostrum nesciunt rem
-              mollitia ea delectus! Iure eaque repellat iste, soluta quasi
-              tenetur vitae harum quam dignissimos maiores molestiae cumque
-              libero nisi assumenda? Expedita a dignissimos sequi laudantium
-              eaque reprehenderit ipsam veniam. Dolore nulla facilis veniam
-              fugit officia. Quasi adipisci quod similique reiciendis iusto
-              doloremque laboriosam soluta vel odit, animi dolorem quibusdam
-              nihil illo quia nobis dignissimos, debitis neque dolorum ea dolor
-              accusamus. Voluptatem, at. Ducimus necessitatibus nemo eos quia,
-              beatae, architecto quae ipsam fugit provident culpa aliquam,
-              mollitia soluta nisi voluptatem assumenda aut debitis dolorem rem
-              iste quod. Sunt, earum. Quibusdam aperiam nihil obcaecati sunt eos
-              rerum, possimus voluptates quia cupiditate dolor aspernatur
-              voluptatum ipsa, ullam vitae sint veritatis accusamus temporibus
-              quam ad magni consequatur! Natus aperiam reprehenderit est. Fugiat
-              adipisci voluptas, eaque totam, quisquam id est harum voluptate
-              officiis blanditiis, eligendi laborum labore corporis neque
-              sapiente? Cupiditate, nihil? Quam eveniet cupiditate, magnam
-              placeat laboriosam iure, voluptatibus cumque culpa enim harum
-              explicabo esse natus labore ducimus facilis sint quisquam
-              voluptates ipsa nesciunt deleniti unde, libero fugit. Ratione
-              autem corrupti, molestiae ullam enim illum dolor obcaecati
-              reprehenderit.
+              Starting from a small online page to multiple outlets in Dhaka the
+              Capital of Bangladesh is a summarized story of a widely known
+              bakery and novelty Cake & Pastry shop Banee’s Creation. The
+              Founder and Executive Chef of Banee’s Creation is Chef Tahmina
+              Ahmed Banee, who is one of the most popular bakery and pastry
+              chefs of Bangladesh started her magic in baking from her small
+              kitchen and her extraordinary talent in Sugar art and customized
+              fondant cakes attracted the vast social media using young
+              generation from her first facebook page in 2014. Her love and
+              passion for baking, humble behavior, dedication and uniqueness in
+              baking soon became a demand of thousands of people that resulted
+              her first outlet at Khilgaon in 2017. Later on, peoples love for
+              banee’s was spreading and Chef Banee had to inaugurate multiple
+              outlets in different places in Dhaka like Mirpur, Mohakhali,
+              Lalmatia & Dhanmondi. Each outlet of Banee’s creation get the most
+              unique opening ceremony as Chef Banee tries to make big burgers in
+              every outlet launching day. The last big burger she made was a
+              47Kg beef burger which is so far the biggest burger made in
+              Bangladesh that also got media coverage.
+              <br></br>Chef Banee has now become one of the most well-known
+              women entrepreneurs in culinary field and made a Banee’s team
+              consisting 25 members. However, Chef Banee never wanted to walk
+              alone and started working with women empowering and opened a Govt,
+              certified academy named “Banee’s Academy of Baking Science and
+              Pastry Arts”, from where people can learn professional baking
+              specially women and soon this academy became the best place to
+              learn A to Z of Baking form, in Bangladesh. Hundreds of people
+              from inside and outside of this country took training from her and
+              became a successful baker. All of these would never become
+              possible if she didn’t get enough support from her family members
+              specially her husband Mr. Nasim Ahmed, who was always there by her
+              side as a pillar and letter took the huge responsibility of the
+              Chief Executive Ofiicer of Banee’s Creation and Banee’s Academy
+              and her daughter Chef Shemonti Ahmed, working as a sugar artist of
+              Banee’s creation and providing advanced cake decoration training
+              as a master trainer of Banee’s Academy. Now Banee’s has become a
+              powerful team and all of the members are working together to make
+              a huge Banee’s creation chain and to serve the best quality
+              service and bakery and confectionary products at every corner in
+              Bangladesh.
             </p>
           </div>
         </div>

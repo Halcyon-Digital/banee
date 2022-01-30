@@ -1,0 +1,17 @@
+.course-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.width {
+  width: 31%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 10px;
+  border: 1px solid #511c3a;
+}
+.course-fee {
+  margin: 10px 0;
+}

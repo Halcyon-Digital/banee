@@ -1,12 +1,10 @@
-import React, { useState } from "react";
-import { HashLink } from "react-router-hash-link";
-import product_1 from "../assets/images/cake-1.webp";
+import React from "react";
 import call_icon from "../assets/images/call-icon.webp";
-import background from "../assets/images/product-details-background.webp";
-import Navbar from "../Components/Navbar";
 import axios from "axios";
 import { useQuery, useQueryClient } from "react-query";
-import ProductCard from "../Components/ProductCard";
+import Related_ProductCard from "../Components/Related_ProductCard";
+import Creative_Navbar from "../Components/Creative_Navbar";
+import PreLoader from "../Components/PreLoader";
 const proxy = process.env.REACT_APP_PROXY;
 const ck = process.env.REACT_APP_CK;
 const cs = process.env.REACT_APP_CS;
@@ -24,8 +22,25 @@ const getProductDetails = async (x) => {
     });
   return data;
 };
+const getBranchLocation = async (x) => {
+  const data = await axios
+    .get(`${proxy}/wp/v2/branches`, {
+      auth: {
+        username: ck,
+        password: cs,
+      },
+    })
+    .then((res) => {
+      return res.data;
+    });
+  return data;
+};
 export default function Product_details(props) {
   const queryClient = new useQueryClient();
+  const { data: branchLocation, status: branchStatus } = useQuery(
+    ["BranchDetails"],
+    getBranchLocation
+  );
   const { data: ProductDetails, status: detailsStatus } = useQuery(
     ["ProductDetailsData", props.match.params.id],
     getProductDetails,
@@ -43,32 +58,130 @@ export default function Product_details(props) {
       },
     }
   );
+  
+  function changeBigimage(src) {
+    window.scrollTo(0, 0);
+    document.getElementById("big-image").src = src;
+  }
+  //   // Image Magnifier
+
+  function magnify(imgID, zoom) {
+    
+    var img, glass, w, h, bw;
+    img = document.getElementById(imgID);
+    /*create magnifier glass:*/
+    glass = document.createElement("DIV");
+    glass.setAttribute("class", "img-magnifier-glass");
+    glass.setAttribute("id", "img-magnifier-glass");
+    /*insert magnifier glass:*/
+    img.parentElement.insertBefore(glass, img);
+    /*set background properties for the magnifier glass:*/
+    glass.style.backgroundImage = "url('" + img.src + "')";
+    glass.style.backgroundRepeat = "no-repeat";
+    glass.style.backgroundSize =
+      img.width * zoom + "px " + img.height * zoom + "px";
+    bw = 3;
+    w = glass.offsetWidth / 2;
+    h = glass.offsetHeight / 2;
+    /*execute a function when someone moves the magnifier glass over the image:*/
+    glass.addEventListener("mousemove", moveMagnifier);
+    img.addEventListener("mousemove", moveMagnifier);
+    /*and also for touch screens:*/
+    glass.addEventListener("touchmove", moveMagnifier);
+    img.addEventListener("touchmove", moveMagnifier);
+    function moveMagnifier(e) {
+      var pos, x, y;
+      /*prevent any other actions that may occur when moving over the image*/
+      e.preventDefault();
+      /*get the cursor's x and y positions:*/
+      pos = getCursorPos(e);
+      x = pos.x;
+      y = pos.y;
+      /*prevent the magnifier glass from being positioned outside the image:*/
+      if (x > img.width - w / zoom) {
+        x = img.width - w / zoom;
+      }
+      if (x < w / zoom) {
+        x = w / zoom;
+      }
+      if (y > img.height - h / zoom) {
+        y = img.height - h / zoom;
+      }
+      if (y < h / zoom) {
+        y = h / zoom;
+      }
+      /*set the position of the magnifier glass:*/
+      glass.style.left = x - w + "px";
+      glass.style.top = y - h + "px";
+      /*display what the magnifier glass "sees":*/
+      glass.style.backgroundPosition =
+        "-" + (x * zoom - w + bw) + "px -" + (y * zoom - h + bw) + "px";
+    }
+    function getCursorPos(e) {
+      var a,
+        x = 0,
+        y = 0;
+      e = e || window.event;
+      /*get the x and y positions of the image:*/
+      a = img.getBoundingClientRect();
+      /*calculate the cursor's x and y coordinates, relative to the image:*/
+      x = e.pageX - a.left;
+      y = e.pageY - a.top;
+      /*consider any page scrolling:*/
+      x = x - window.pageXOffset;
+      y = y - window.pageYOffset;
+      return { x: x, y: y };
+    }
+  }
+
+  //   // Image Magnifier
   return (
     <>
-      <Navbar></Navbar>
-
-      {ProductDetails ? (
+      <Creative_Navbar></Creative_Navbar>
+      {detailsStatus !== "success" ? (
+        <PreLoader/>
+      ) : (
         <>
           <section id={ProductDetails.slug}></section>
           <div className="product-details">
             <div className="row">
-              <div className="col-6 mob-col-10 image-section">
-                <img src={ProductDetails.images[0].src} alt="" srcset="" />
+              <div className="col-6 mob-col-12 image-section">
+                <div
+                  className="img-magnifier-container"
+                  onMouseEnter={() => {
+                    magnify("big-image", 1.5);
+                  }}
+                  onMouseLeave={() => {
+                    if (
+                      document.getElementById("img-magnifier-glass") !== null
+                    ) {
+                      document.getElementById("img-magnifier-glass").remove();
+                    }
+                  }}
+                >
+                  <img
+                    id="big-image"
+                    src={ProductDetails.images[0].src}
+                    alt=""
+                    srcset=""
+                  />
+                </div>
                 <div className="row">
                   {ProductDetails.images.map((image, key) => (
                     <div className="col-3">
-                      <img src={image.src} alt="" srcset="" />
+                      <img
+                        src={image.src}
+                        alt=""
+                        srcset=""
+                        onClick={() => {
+                          changeBigimage(image.src);
+                        }}
+                      />
                     </div>
                   ))}
-                  {/* <div className="col-3">
-                    <img src={product_1} alt="" srcset="" />
-                  </div>
-                  <div className="col-3">
-                    <img src={product_1} alt="" srcset="" />
-                  </div> */}
                 </div>
               </div>
-              <div className="col-6 mob-col-10">
+              <div className="col-6 mob-col-12">
                 <div className="description">
                   <p className="name">{ProductDetails.name}</p>
                   <p
@@ -84,46 +197,31 @@ export default function Product_details(props) {
                     BDT.
                     {ProductDetails.sale_price !== "" ? (
                       <sub>
-                        {" "}
-                        <strike>{ProductDetails.regular_price}</strike>
+                        <strike className ="regular">{ProductDetails.regular_price}</strike>
                       </sub>
                     ) : null}
                     {ProductDetails.price}/-
                   </p>
                   <div className="location">
                     <h4>Call for your pickup:</h4>
-                    <div className="row branch">
-                      <div className="col-8">
-                        <p className="branch-name">Branch-01</p>
-                        <p>Address: H-0, R-0, Mirpur, Dhaka-1216</p>
-                        <p>Contact No: +8801718664707</p>
-                      </div>
-                      <div className="col-2">
-                        <a href="tel:+8801718664707">
-                          <img src={call_icon} alt="" srcset="" />
-                        </a>
-                      </div>
-                    </div>
-                    <div className="row branch">
-                      <div className="col-8">
-                        <p className="branch-name">Branch-01</p>
-                        <p>Address: </p>
-                        <p>Contact No: </p>
-                      </div>
-                      <div className="col-2">
-                        <img src={call_icon} alt="" srcset="" />
-                      </div>
-                    </div>
-                    <div className="row branch">
-                      <div className="col-8">
-                        <p className="branch-name">Branch-01</p>
-                        <p>Address: </p>
-                        <p>Contact No: </p>
-                      </div>
-                      <div className="col-2">
-                        <img src={call_icon} alt="" srcset="" />
-                      </div>
-                    </div>
+                    {branchLocation && branchLocation.length
+                      ? branchLocation.map((branch, key) => (
+                          <div className="row branch">
+                            <div className="col-8">
+                              <p className="branch-name" dangerouslySetInnerHTML={{__html:branch.title.rendered}}>
+                                
+                              </p>
+                              <p>Address: {branch.acf.address}</p>
+                              <p>Contact No: {branch.acf.phone}</p>
+                            </div>
+                            <div className="col-2">
+                              <a href={`tel:${branch.acf.phone}`}>
+                                <img src={call_icon} alt="" srcset="" />
+                              </a>
+                            </div>
+                          </div>
+                        ))
+                      : null}
                   </div>
                 </div>
               </div>
@@ -144,18 +242,8 @@ export default function Product_details(props) {
                 </h3>
                 <div className="row">
                   {ProductDetails.upsell_ids.map((id, key) => (
-                    <ProductCard id={id}></ProductCard>
+                    <Related_ProductCard id={id}></Related_ProductCard>
                   ))}
-
-                  {/* <HashLink to="/creation/product_details/1#Product name 1">
-                  <div className="product-card">
-                    <img src={product_1} alt="" />
-                    <div className="desc">
-                      <p className="name">Product name 1</p>
-                      <p className="price">BDT. 1500</p>
-                    </div>
-                  </div>
-                </HashLink> */}
                 </div>
               </div>
             ) : (
@@ -163,8 +251,6 @@ export default function Product_details(props) {
             )}
           </div>
         </>
-      ) : (
-        ""
       )}
     </>
   );

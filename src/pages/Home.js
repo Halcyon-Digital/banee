@@ -63,7 +63,7 @@ export default function Home() {
                   facere possimus beatae repellat amet. Amet!
                 </p>
                 <p>
-                  <HashLink to="/courses#">
+                  <HashLink to="/academy#">
                     <span className="enroll-btn">Enroll Now</span>
                   </HashLink>
                 </p>

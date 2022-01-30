@@ -156,7 +156,7 @@ export default function Academy() {
                 We offer different types of short courses.
               </p>
               <p>
-                <HashLink to="/academy/courses/short-courses#">
+                <HashLink to="/courses/short#">
                   <span className="btn">Learn More</span>
                 </HashLink>
               </p>

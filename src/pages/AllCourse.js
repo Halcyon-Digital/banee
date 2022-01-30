@@ -11,7 +11,7 @@ const AllCourse = () => {
   const handleButton = (name) => {
     const courseName = name.trim().toLowerCase();
     const path = courseName.replaceAll(" ", "-");
-    history.push(`/academy/courses/${path}`);
+    history.push(`/courses/short/${path}`);
   };
 
   useEffect(() => {

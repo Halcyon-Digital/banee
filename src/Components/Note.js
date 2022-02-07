@@ -1,3 +1,4 @@
 // Get all Courser Restfull Api
 
-// https://admin.banees.com/wp-json/acf/v3/courses
+// macf/v3/courses
+// https://admin.banees.com/gallery-items/gallery-items/

@@ -44,8 +44,28 @@
 }
 
 @media only screen and (max-width: 480px) {
+  .footer {
+    margin-left: 10px;
+  }
   .social-icon-group img {
     width: 18px;
     margin-right: 2px;
+  }
+  .footer .mob-col-4 {
+    flex-basis: 100%;
+    margin: 15px 0.6%;
+  }
+  .footer ul,
+  p {
+    font-size: 14px !important;
+  }
+  .footer .col-10 {
+    flex-basis: 89%;
+  }
+  .footer .col-2 {
+    flex-basis: 7%;
+  }
+  .footer .col-4 {
+    flex-basis: 100%;
   }
 }

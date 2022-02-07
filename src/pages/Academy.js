@@ -1,5 +1,5 @@
 import React from "react";
-import Academy_Navbar from "../Components/Academy_Navbar";
+// import Academy_Navbar from "../Components/Academy_Navbar";
 import baking_course from "../assets/images/baking-course.webp";
 import kids_baking_course from "../assets/images/kids-baking-course.webp";
 import kids_baking_course_doodle from "../assets/images/kids-baking-course-doodle.webp";
@@ -11,6 +11,7 @@ import video from "../assets/video.mp4";
 import { HashLink } from "react-router-hash-link";
 import axios from "axios";
 import { useQuery } from "react-query";
+import Navbar from "../Components/Navbar";
 const proxy = process.env.REACT_APP_PROXY;
 const ck = process.env.REACT_APP_CK;
 const cs = process.env.REACT_APP_CS;
@@ -35,7 +36,7 @@ export default function Academy() {
   );
   return (
     <div>
-      <Academy_Navbar></Academy_Navbar>
+      <Navbar></Navbar>
       <section id=""></section>
       <div className="academy-page">
         <div className="hero-content">
@@ -83,7 +84,7 @@ export default function Academy() {
         <div className="baking-course">
           <div className="course  row">
             <div className="col-6">
-              <h3>Cookery and Cakery Course</h3>
+              <h3>Cakery Course</h3>
               <p className="description">
                 This is an ideal course for people who are looking for basic
                 cooking and baking demonstration course in a short time.{" "}
@@ -99,7 +100,7 @@ export default function Academy() {
               </p>
             </div>
             <div className="col-6">
-              <img src={baking_course} alt="" srcset="" />
+              <img src={baking_course} alt="" srcSet="" />
             </div>
           </div>
         </div>
@@ -109,7 +110,7 @@ export default function Academy() {
               className="kids-image"
               src={kids_baking_course}
               alt=""
-              srcset=""
+              srcSet=""
             />
             <img
               className="kids-baking-course-bg"
@@ -162,7 +163,7 @@ export default function Academy() {
               </p>
             </div>
             <div className="col-6">
-              <img src={cookery_crackary_course} alt="" srcset="" />
+              <img src={cookery_crackary_course} alt="" srcSet="" />
             </div>
           </div>
         </div>
@@ -172,7 +173,7 @@ export default function Academy() {
               className="kids-image"
               src={govt_baking_course}
               alt=""
-              srcset=""
+              srcSet=""
             />
             <img
               className="kids-baking-course-bg"

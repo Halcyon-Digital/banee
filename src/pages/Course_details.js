@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import course_details_bg from "../assets/images/course-details-bg.webp";
-import Navbar from "../Components/Academy_Navbar";
+// import Navbar from "../Components/Academy_Navbar";
 import axios from "axios";
 import { useQuery, useQueryClient } from "react-query";
 import sendEmail from "../Components/Send_email";
+import Navbar from "../Components/Navbar";
 const proxy = process.env.REACT_APP_PROXY;
 const ck = process.env.REACT_APP_CK;
 const cs = process.env.REACT_APP_CS;
@@ -48,7 +49,7 @@ export default function Course_details(props) {
       },
     }
   );
-  console.log(CourseDetails);
+
   useEffect(() => {
     axios
       .post(`${proxy}/jwt-auth/v1/token`, {
@@ -63,6 +64,15 @@ export default function Course_details(props) {
         }
       });
   }, []);
+
+  const endDate = CourseDetails?.acf.end_date;
+  if (endDate) {
+    const lastDate = endDate.split("-");
+    const [date, month, year] = lastDate;
+    const lastedDate = new Date(`${month}-${date}-${year}`).getTime();
+    let presentDate = new Date().getTime();
+    var isBig = lastedDate > presentDate;
+  }
 
   async function handleRegistrationForm() {
     var confirm = window.confirm("Are you sure to continue?");
@@ -141,7 +151,7 @@ export default function Course_details(props) {
       {true ? (
         <div className="course-details">
           <div className="hero-content">
-            <img src={CourseDetails?.acf.banner.url} alt="" srcset="" />
+            <img src={CourseDetails?.acf.banner.url} alt="" srcSet="" />
           </div>
           <div className="container">
             <h3 className="title">
@@ -191,42 +201,51 @@ export default function Course_details(props) {
               </div>
               <div className="col-4 mob-col-10">
                 <div className="pricing">
-                  <div className="desc">
-                    <p>Course fee:</p>
-                    <p>
-                      <b>BDT. {CourseDetails.acf.course_fee}/-</b>
-                    </p>
-                    <div className="py-2">
-                      <p>Course Starting Date</p>
+                  {isBig ? (
+                    <div className="desc">
+                      <p>Course fee:</p>
                       <p>
-                        <b>{CourseDetails.acf.start_date}</b>
+                        <b>BDT. {CourseDetails.acf.course_fee}/-</b>
+                      </p>
+                      <div className="py-2">
+                        <p>Course Starting Date</p>
+                        <p>
+                          <b>{CourseDetails.acf.start_date}</b>
+                        </p>
+                      </div>
+
+                      {CourseDetails.acf.end_date ? (
+                        <>
+                          <p>Course Ending Date</p>
+                          <p>
+                            <b>{CourseDetails.acf.end_date}</b>
+                          </p>
+                        </>
+                      ) : (
+                        <p>
+                          <b>Admission Going On...</b>
+                        </p>
+                      )}
+
+                      <p
+                        className="btn"
+                        onClick={() => {
+                          window.scrollTo(0, 0);
+                          document.getElementById(
+                            "form-overlay"
+                          ).style.display = "block";
+                        }}
+                      >
+                        Register
                       </p>
                     </div>
-
-                    {CourseDetails.acf.end_date ? (
-                      <>
-                        <p>Course Ending Date</p>
-                        <p>
-                          <b>{CourseDetails.acf.end_date}</b>
-                        </p>
-                      </>
-                    ) : (
-                      <p>
-                        <b>Admission Going On...</b>
-                      </p>
-                    )}
-
-                    <p
-                      className="btn"
-                      onClick={() => {
-                        window.scrollTo(0, 0);
-                        document.getElementById("form-overlay").style.display =
-                          "block";
-                      }}
-                    >
-                      Register
+                  ) : (
+                    <p>
+                      <b>
+                        Course Availability End in {CourseDetails.acf.end_date}
+                      </b>
                     </p>
-                  </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -355,7 +374,7 @@ export default function Course_details(props) {
               </form>
             </div>
           </div>
-          <img className="bg" src={course_details_bg} alt="" srcset="" />
+          <img className="bg" src={course_details_bg} alt="" srcSet="" />
           {/* {AllCourse && AllCourse.length ? (
             <div className="related-products">
               <h3 className="title">

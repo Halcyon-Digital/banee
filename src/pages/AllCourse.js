@@ -32,6 +32,7 @@ const AllCourse = () => {
           {courseDetails.map((course) => (
             <div className="professional-course width">
               <div>
+                <img src={course.acf.course_image} alt="" />
                 <h3>{course.acf.course_name}</h3>
                 <p className="description">
                   {course.acf.course_description.slice(0, 190)}

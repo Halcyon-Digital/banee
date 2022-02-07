@@ -61,12 +61,11 @@ li {
 /* Image magnifier */
 
 .img-magnifier-container {
-  
   /* width: 585px;
   height: 650px; */
   /* width: 75%;
   height: 75%; */
- margin-bottom: 15px;
+  margin-bottom: 15px;
   position: relative;
 }
 
@@ -109,7 +108,7 @@ li {
   margin: auto;
 }
 .invite-area .cake-shop .invite-area-cake-logo {
-  width: 140px;
+  width: 200px;
 }
 .invite-area .cake-shop .description {
   text-align: center;
@@ -141,7 +140,7 @@ li {
   margin: auto;
 }
 .invite-area .creation .invite-area-creation-logo {
-  width: 140px;
+  width: 200px;
 }
 .invite-area .creation .description {
   text-align: center;
@@ -285,6 +284,7 @@ li {
 }
 .product-details .row {
   align-items: flex-start;
+  justify-content: flex-start;
 }
 .image-section img {
   width: 100%;
@@ -318,7 +318,7 @@ li {
 .product-details .description .location img {
   width: 35px;
 }
-.product-details .description .regular{
+.product-details .description .regular {
   padding: 0 5px;
 }
 .location .branch {
@@ -379,9 +379,11 @@ li {
   display: block;
   position: inherit;
   padding: 0px 10%;
+  transform: translateX(-5%);
 }
 .custom-order .registration-form form {
   border: none;
+  margin-top: 15px;
 }
 .custom-order .registration-form form .title {
   text-align: center;
@@ -529,7 +531,7 @@ li {
   padding: 50px;
 }
 
-.course-details .pricing .py-2{
+.course-details .pricing .py-2 {
   padding: 7px 0;
 }
 .course-details .btn {
@@ -541,7 +543,7 @@ li {
 }
 .course-details .pricing {
   margin-top: 30px;
-  width: 90%;
+  width: auto;
   text-align: center;
 }
 .course-card {
@@ -576,14 +578,16 @@ li {
   float: right;
   position: relative;
   margin-top: -10px;
+  cursor: default;
 }
 .registration-form {
   display: none;
   position: absolute;
   top: 100px;
-  left: 0;
-  /* width: 90%; */
-  padding: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  /* padding: 10%; */
   /* border: 1px solid black; */
 }
 .registration-form .success-messages {
@@ -644,4 +648,17 @@ li {
   color: white;
   font-size: 12px;
   padding: 15px 10%;
+}
+.copyright-section p a {
+  color: #fff !important;
+}
+.affiliations .container {
+  width: 80%;
+  margin: 0 auto;
+}
+.affiliations .img {
+  text-align: center;
+}
+.affiliations .img img {
+  width: 300px;
 }

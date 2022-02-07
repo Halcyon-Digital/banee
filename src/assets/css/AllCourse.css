@@ -15,3 +15,11 @@
 .course-fee {
   margin: 10px 0;
 }
+.professional-course img {
+  width: 100%;
+}
+.professional-course h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 6px 0;
+}

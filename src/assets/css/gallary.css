@@ -42,7 +42,10 @@
 }
 @media only screen and (max-width: 480px) {
   .gallery > div > img {
-    width: 133px;
+    width: 182px;
     /* height: 133px; */
+  }
+  .gallery > div:hover > img {
+    transform: scale(1, 1);
   }
 }

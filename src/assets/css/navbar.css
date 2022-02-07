@@ -10,14 +10,15 @@
 }
 
 .nav .nav-bar .logo img {
-  width: 180px;
+  /* width: 180px; */
+  height: 85px;
 }
 .academy-nav .nav-bar .logo img {
   width: 75px;
 }
-.nav-item-group {
+/* .nav-item-group {
   margin-right: 100px;
-}
+} */
 .nav .nav-bar ul {
   list-style: none;
   display: flex;
@@ -28,4 +29,3 @@
   font-size: 18px;
   font-weight: 600;
 }
-  

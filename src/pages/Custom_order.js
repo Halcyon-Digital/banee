@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Creative_Navbar from "../Components/Creative_Navbar";
 import sendEmail from "../Components/Send_email";
 import axios from "axios";
+import Navbar from "../Components/Navbar";
 const proxy = process.env.REACT_APP_PROXY;
 const username = process.env.REACT_APP_API_USERNAME;
 const password = process.env.REACT_APP_API_PASSWORD;
@@ -15,7 +16,7 @@ export default function Custom_order() {
   const [address, setAddress] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [notes , setNotes] = useState("")
+  const [notes, setNotes] = useState("");
 
   const [delivery, setDelivery] = useState("");
   const [image1_url, setimage1_url] = useState("");
@@ -128,7 +129,7 @@ export default function Custom_order() {
               quantity: quantity,
               address: address,
               phone: phone,
-              notes : notes,
+              notes: notes,
               email: email,
               delivery_date: delivery,
             },
@@ -174,7 +175,7 @@ export default function Custom_order() {
 
   return (
     <>
-      <Creative_Navbar></Creative_Navbar>
+      <Navbar></Navbar>
       <div className="custom-order">
         <div className="registration-form" id="form-overlay">
           <form

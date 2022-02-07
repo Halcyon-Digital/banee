@@ -5,6 +5,7 @@ import { useQuery, useQueryClient } from "react-query";
 import Related_ProductCard from "../Components/Related_ProductCard";
 import Creative_Navbar from "../Components/Creative_Navbar";
 import PreLoader from "../Components/PreLoader";
+import Navbar from "../Components/Navbar";
 const proxy = process.env.REACT_APP_PROXY;
 const ck = process.env.REACT_APP_CK;
 const cs = process.env.REACT_APP_CS;
@@ -58,7 +59,7 @@ export default function Product_details(props) {
       },
     }
   );
-  
+
   function changeBigimage(src) {
     window.scrollTo(0, 0);
     document.getElementById("big-image").src = src;
@@ -66,7 +67,6 @@ export default function Product_details(props) {
   //   // Image Magnifier
 
   function magnify(imgID, zoom) {
-    
     var img, glass, w, h, bw;
     img = document.getElementById(imgID);
     /*create magnifier glass:*/
@@ -137,9 +137,9 @@ export default function Product_details(props) {
   //   // Image Magnifier
   return (
     <>
-      <Creative_Navbar></Creative_Navbar>
+      <Navbar></Navbar>
       {detailsStatus !== "success" ? (
-        <PreLoader/>
+        <PreLoader />
       ) : (
         <>
           <section id={ProductDetails.slug}></section>
@@ -163,7 +163,7 @@ export default function Product_details(props) {
                     id="big-image"
                     src={ProductDetails.images[0].src}
                     alt=""
-                    srcset=""
+                    srcSet=""
                   />
                 </div>
                 <div className="row">
@@ -172,7 +172,7 @@ export default function Product_details(props) {
                       <img
                         src={image.src}
                         alt=""
-                        srcset=""
+                        srcSet=""
                         onClick={() => {
                           changeBigimage(image.src);
                         }}
@@ -197,7 +197,9 @@ export default function Product_details(props) {
                     BDT.
                     {ProductDetails.sale_price !== "" ? (
                       <sub>
-                        <strike className ="regular">{ProductDetails.regular_price}</strike>
+                        <strike className="regular">
+                          {ProductDetails.regular_price}
+                        </strike>
                       </sub>
                     ) : null}
                     {ProductDetails.price}/-
@@ -208,15 +210,18 @@ export default function Product_details(props) {
                       ? branchLocation.map((branch, key) => (
                           <div className="row branch">
                             <div className="col-8">
-                              <p className="branch-name" dangerouslySetInnerHTML={{__html:branch.title.rendered}}>
-                                
-                              </p>
+                              <p
+                                className="branch-name"
+                                dangerouslySetInnerHTML={{
+                                  __html: branch.title.rendered,
+                                }}
+                              ></p>
                               <p>Address: {branch.acf.address}</p>
                               <p>Contact No: {branch.acf.phone}</p>
                             </div>
                             <div className="col-2">
                               <a href={`tel:${branch.acf.phone}`}>
-                                <img src={call_icon} alt="" srcset="" />
+                                <img src={call_icon} alt="" srcSet="" />
                               </a>
                             </div>
                           </div>

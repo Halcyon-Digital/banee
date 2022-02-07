@@ -42,7 +42,7 @@ export default function Footer() {
                 className="creation"
                 src={footer_logo_creation}
                 alt=""
-                srcset=""
+                srcSet=""
               />
             </div>
             <div className="col-6">
@@ -51,35 +51,40 @@ export default function Footer() {
           </div>
           <div className="row">
             <div className="col-2">
-              <img src={location_icon} alt="" srcset="" />
+              <img src={location_icon} alt="" srcSet="" />
             </div>
             <div className="col-10">
-              <p>House: Otendrila, 4/4/1-B, Block A, Lalmatia, Dhaka-1207</p>
+              <p>7/7, block C, Lalmatia, Dhaka, Bangladesh.</p>
             </div>
           </div>
           <div className="row">
             <div className="col-2">
-              <img src={headphone_icon} alt="" srcset="" />
+              <img src={headphone_icon} alt="" srcSet="" />
             </div>
             <div className="col-10">
-              <p>+8801701224758</p>
+              <p>+8801911667844</p>
             </div>
           </div>
           <div className="row">
             <div className="col-2">
-              <img src={email_icon} alt="" srcset="" />
+              <img src={email_icon} alt="" srcSet="" />
             </div>
             <div className="col-10">
               <p>banees.academy.creation@gmail.com</p>
             </div>
           </div>
         </div>
-        <div className="col-3    mob-col-4">
+        <div className="col-3 md-col-res   mob-col-4">
           <ul>
             {branchLocation && branchLocation.length
               ? branchLocation.map((branch, key) => (
                   <>
-                    <li className="title" dangerouslySetInnerHTML={{__html:branch.title.rendered}}></li>
+                    <li
+                      className="title"
+                      dangerouslySetInnerHTML={{
+                        __html: branch.title.rendered,
+                      }}
+                    ></li>
                     <li>Address:&nbsp;{branch.acf.address} </li>
                     <li>Contact:&nbsp;{branch.acf.phone}</li>
                   </>
@@ -96,12 +101,12 @@ export default function Footer() {
             <a href="https://www.facebook.com/BaneesCreation" target="_blank">
               <img src={insta}></img>
             </a>
-            <a href="https://www.facebook.com/BaneesCreation" target="_blank">
+            {/*  <a href="https://www.facebook.com/BaneesCreation" target="_blank">
               <img src={twitter}></img>
             </a>
             <a href="https://www.facebook.com/BaneesCreation" target="_blank">
               <img src={youtube}></img>
-            </a>
+            </a> */}
           </div>
           <ul>
             <li className="title">Useful Links</li>
@@ -121,7 +126,17 @@ export default function Footer() {
         </div>
       </div>
       <div className="row copyright-section">
-        <p>Copyright @ 2021 Banees</p> <p>Developed by Halcyon Digital</p>
+        <p>Copyright @ 2021 Banees</p>{" "}
+        <p>
+          Developed by{" "}
+          <a
+            href="http://halcyonbd.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Halcyon Digital
+          </a>
+        </p>
       </div>
     </div>
   );

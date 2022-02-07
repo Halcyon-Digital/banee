@@ -1,10 +1,11 @@
 import React from "react";
-import Navbar from "../Components/Creative_Navbar";
 import Preloader from "../Components/PreLoader";
 import "../assets/css/gallary.css";
 import axios from "axios";
 import { useQuery } from "react-query";
 import PreLoader from "../Components/PreLoader";
+// import Creative_Navbar from "../Components/Creative_Navbar";
+import Navbar from "../Components/Navbar";
 const proxy = process.env.REACT_APP_PROXY;
 const getgallaryData = async (x) => {
   const data = await axios.get(`${proxy}/wp/v2/gallary`).then((res) => {
@@ -20,7 +21,7 @@ export default function Gallary() {
   return (
     <>
       <Navbar></Navbar>
-      
+
       <div className="gallery cf">
         {GallaryStatus !== "success" ? (
           <PreLoader></PreLoader>

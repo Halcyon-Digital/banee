@@ -6,6 +6,7 @@ import ProductCard from "../Components/Related_ProductCard";
 import Creative_Navbar from "../Components/Creative_Navbar";
 import Product_card from "../Components/Product_card";
 import PreLoader from "../Components/PreLoader";
+import Navbar from "../Components/Navbar";
 const proxy = process.env.REACT_APP_PROXY;
 const ck = process.env.REACT_APP_CK;
 const cs = process.env.REACT_APP_CS;
@@ -62,15 +63,15 @@ export default function Creation() {
     ["ProductPageBanner"],
     getProductPageBanner
   );
- 
+
   return (
     <div>
-      <Creative_Navbar></Creative_Navbar>
+      <Navbar></Navbar>
       <section id=""></section>
       <div className="hero-area">
         <div className="hero-content">
           {banner && banner.length ? (
-            <img src={banner[0].acf.banner_image.url} alt="" srcset="" />
+            <img src={banner[0].acf.banner_image.url} alt="" srcSet="" />
           ) : null}
         </div>
 
@@ -80,7 +81,8 @@ export default function Creation() {
               <ul className="category-list">
                 {AllCategories && AllCategories.length
                   ? AllCategories.map((category, key) => (
-                      <li key={key}
+                      <li
+                        key={key}
                         className="category-list-item"
                         onClick={() => {
                           // sortProduct(category.id);
@@ -103,7 +105,10 @@ export default function Creation() {
                 <>
                   {AllProducts && AllProducts.length ? (
                     AllProducts.map((product, key) => (
-                      <Product_card ProductDetails={product}></Product_card>
+                      <Product_card
+                        ProductDetails={product}
+                        key={key}
+                      ></Product_card>
                     ))
                   ) : (
                     <h3 className="title">No Product Available</h3>

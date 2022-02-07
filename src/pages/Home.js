@@ -8,6 +8,8 @@ import invite_area_creation_logo from "../assets/images/landing-page/invite-area
 import about_us_header from "../assets/images/landing-page/about-us-header.webp";
 import about_us_lolipop from "../assets/images/landing-page/about-us-lolipop.webp";
 import gallary from "../assets/images/landing-page/landin-page-galary.webp";
+import bteb from "../assets/images/landing-page/bteb_logo.webp";
+import nsd from "../assets/images/landing-page/nsda_logo.webp";
 import Navbar from "../Components/Navbar";
 export default function Home() {
   return (
@@ -17,7 +19,7 @@ export default function Home() {
       <div className="home-page">
         <div className="hero-area">
           <div className="hero-content">
-            <img src={header_image} alt="" srcset="" />
+            <img src={header_image} alt="" srcSet="" />
           </div>
         </div>
         <div className="invite-area invite-area-cake">
@@ -31,12 +33,16 @@ export default function Home() {
                   className="invite-area-cake-logo"
                   src={invite_area_cake}
                   alt=""
-                  srcset=""
+                  srcSet=""
                 />
-                <h3>Lorem Ipsum</h3>
+                {/* <h3>Banee's Creation</h3> */}
                 <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
-                  facere possimus beatae repellat amet. Amet!
+                  “Banee’s Creation is listed as a top rated Bakery in Dhaka. We
+                  create unique cakes for all occasions and specialized in
+                  custom/sculpted cakes. Click the ‘Cake Shop’ button to see
+                  what kind of cake we can design for your birthday,
+                  anniversary, baby shower or special events and what types of
+                  food and dessert items we sell.”
                 </p>
                 <p>
                   <HashLink to="/creation#">
@@ -55,12 +61,16 @@ export default function Home() {
                   className="invite-area-creation-logo"
                   src={invite_area_creation_logo}
                   alt=""
-                  srcset=""
+                  srcSet=""
                 />
-                <h3>Lorem Ipsum</h3>
+                {/* <h3>Government Affiliations</h3> */}
                 <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
-                  facere possimus beatae repellat amet. Amet!
+                  Banee’s Academy is a government affiliated institute to
+                  provide technical education like Bakery and Food and beverage
+                  production. It is the highest rated institute in Bangladesh to
+                  provide professional Baking and Cooking courses. To see the
+                  available courses we are currently offering, please click the
+                  button ‘Enroll now’ now!
                 </p>
                 <p>
                   <HashLink to="/academy#">
@@ -77,10 +87,10 @@ export default function Home() {
         <div className="about-us">
           <img className="about-us-header" src={about_us_header} alt="" />
           <div className="about-us-para">
-            <img src={about_us_lolipop} alt="" srcset="" />
+            <img src={about_us_lolipop} alt="" srcSet="" />
             <h3 className="title">
-              <span className="sec-1">About</span>{" "}
-              <span className="sec-2">us</span>
+              <span className="sec-1">Our</span>{" "}
+              <span className="sec-2">Story</span>
             </h3>
             <p className="description">
               Starting from a small online page to multiple outlets in Dhaka the
@@ -125,9 +135,31 @@ export default function Home() {
               Bangladesh.
             </p>
           </div>
+          <div className="affiliations">
+            <div className="container">
+              <h3 className="title">
+                <span className="sec-1">Our</span>{" "}
+                <span className="sec-2">Affiliations</span>
+              </h3>
+              <div className="row">
+                <div className="col-6">
+                  <div className="img">
+                    <img src={bteb} alt="affiliations Image" />
+                    <h4>Bangladesh Technical Education Board (BTEB)</h4>
+                  </div>
+                </div>
+                <div className="col-6">
+                  <div className="img">
+                    <img src={nsd} alt="affiliations Image" />
+                    <h4>NSDA (National Skills Development Authority)</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="galary">
-          <img src={gallary} alt="" srcset="" />
+          <img src={gallary} alt="" srcSet="" />
         </div>
       </div>
     </>

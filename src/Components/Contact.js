@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Academy_Navbar from "./Academy_Navbar";
+import Navbar from "./Navbar";
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
   window.scrollTo(0, 0);
@@ -16,6 +17,7 @@ export default function Contact() {
     Phone : ${document.getElementsByName("phone")[0].value} <br><br>
     Message : ${document.getElementsByName("message")[0].value}`,
     }).then((message) => {
+      console.log(message);
       if (message === "OK") {
         // setIsLoading(false);
         document.getElementById("btn").innerText = "Email Sent";
@@ -28,7 +30,7 @@ export default function Contact() {
 
   return (
     <>
-      <Academy_Navbar></Academy_Navbar>
+      <Navbar></Navbar>
 
       <div className="contact-page">
         <div className="row">
@@ -37,12 +39,12 @@ export default function Contact() {
               <div className="row">
                 <h1 className="title">Contact Us at</h1>
               </div>
-              <p>Banees</p>
+              <p>Banee’s Academy</p>
               <li>LIC No. TRAD/DSCC/0000/0000</li>
-              <li>abc, def, efg, Dhaka-1217</li>
+              <li>7/7, block C, Lalmatia, Dhaka</li>
 
-              <li> +880 111 111 111</li>
-              <li> banees@gmail.com</li>
+              <li> +8801911667844</li>
+              <li> banees.academy.creation@gmail.com</li>
             </ul>
           </div>
           <div className="col-6 mob-col-12">

@@ -658,6 +658,7 @@ li {
 }
 .affiliations .img {
   text-align: center;
+  margin-bottom: 20px;
 }
 .affiliations .img img {
   width: 300px;

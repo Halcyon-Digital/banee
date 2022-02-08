@@ -92,7 +92,7 @@ export default function Footer() {
               : null}
           </ul>
         </div>
-        <div className="col-3">
+        <div className="col-3 mob-col-12">
           {/* <p>Also seen on</p> */}
           <div className="row social-icon-group">
             <a href="https://www.facebook.com/BaneesCreation" target="_blank">

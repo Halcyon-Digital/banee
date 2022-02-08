@@ -5,7 +5,7 @@ import cakeshop_image from "../assets/images/landing-page/landing-page-cake-shop
 import invite_area_cake from "../assets/images/landing-page/invite-area-cake.webp";
 import invite_area_creation from "../assets/images/landing-page/invite-area-creation.webp";
 import invite_area_creation_logo from "../assets/images/landing-page/invite-area-creation-logo.webp";
-import about_us_header from "../assets/images/landing-page/about-us-header.webp";
+import about_us_header from "../assets/images/landing-page/about-us-header.png";
 import about_us_lolipop from "../assets/images/landing-page/about-us-lolipop.webp";
 import gallary from "../assets/images/landing-page/landin-page-galary.webp";
 import bteb from "../assets/images/landing-page/bteb_logo.webp";

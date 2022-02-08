@@ -71,8 +71,9 @@ export default function Course_details(props) {
     const [date, month, year] = lastDate;
     const lastedDate = new Date(`${month}-${date}-${year}`).getTime();
     let presentDate = new Date().getTime();
-    var isBig = lastedDate > presentDate;
+    var isBig = lastedDate >= presentDate;
   }
+  console.log(isBig);
 
   async function handleRegistrationForm() {
     var confirm = window.confirm("Are you sure to continue?");
